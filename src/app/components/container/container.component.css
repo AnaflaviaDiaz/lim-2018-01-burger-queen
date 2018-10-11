@@ -1,0 +1,8 @@
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.border {
+  border: 1px red solid;
+}

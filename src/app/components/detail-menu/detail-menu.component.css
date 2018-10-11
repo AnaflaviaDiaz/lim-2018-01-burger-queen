@@ -1,0 +1,4 @@
+.checkbox-max {
+  width: 25px !important;
+  height: calc(2.25rem + 2px);
+}
