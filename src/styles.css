@@ -8256,6 +8256,10 @@ button.bg-dark:hover {
   margin-left: 3rem !important
 }
 
+.mt-10 {
+  margin-top: 10px !important;
+}
+
 .p-0 {
   padding: 0 !important
 }
