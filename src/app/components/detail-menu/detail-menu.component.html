@@ -1,7 +1,7 @@
 <div class="row">
 
   <!-- tabla de desayuno -->
-  <!-- <table class="table col-12 table-hover">
+  <table *ngIf="typefood" class="table col-12 table-hover">
       <thead>
         <tr>
           <th scope="col">Desayuno</th>
@@ -30,10 +30,10 @@
           <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
         </tr>
       </tbody>
-    </table> -->
+    </table>
 
   <!-- tabla de menú -->
-  <table class="table col-12 table-hover">
+  <table *ngIf="!typefood" class="table col-12 table-hover">
     <thead>
       <tr>
         <th scope="col">Menú</th>

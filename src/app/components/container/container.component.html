@@ -9,10 +9,10 @@
 
     <div class="col">
       <div class="mt-5">
-        <app-menu-select></app-menu-select>
+        <app-menu-select (typeFood)="breakfast = $event"></app-menu-select>
       </div>
       <div class="mt-4">
-        <app-detail-menu></app-detail-menu>
+        <app-detail-menu [typefood]="breakfast"></app-detail-menu>
       </div>
     </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-menu-select',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuSelectComponent implements OnInit {
 
-  constructor() { }
+  breakfast= true;
+
+  @Output() typeFood: EventEmitter<boolean>;
+
+  constructor() {
+    this.typeFood = new EventEmitter();
+    // console.log(this.typeFood);
+   }
 
   ngOnInit() {
+  }
+
+  showBreakfast() {
+    this.breakfast = true;
+    this.typeFood.emit(this.breakfast);
+  }
+
+  showMenu() {
+    this.breakfast = false;
+    this.typeFood.emit(this.breakfast);
   }
 
 }

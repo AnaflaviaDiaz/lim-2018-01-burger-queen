@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
+  breakfast = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngDoCheck() {
+    // console.log(this.breakfast);
   }
 
 }

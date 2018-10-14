@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail-menu',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailMenuComponent implements OnInit {
 
-  constructor() { }
+  @Input() typefood = true;
+
+  constructor() { 
+    console.log(this.typefood)
+  }
 
   ngOnInit() {
   }
