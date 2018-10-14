@@ -2,35 +2,40 @@
 
   <!-- tabla de desayuno -->
   <table *ngIf="typefood" class="table col-12 table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Desayuno</th>
-          <th scope="col">Precio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cafe americano</td>
-          <td>S/. 5.00</td>
-          <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
-        </tr>
-        <tr>
-          <td>Cafe con leche</td>
-          <td>S/. 7.00</td>
-          <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
-        </tr>
-        <tr>
-          <td>Sandwich de jamón y queso</td>
-          <td>S/. 10.00</td>
-          <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
-        </tr>
-        <tr>
-          <td>Jugo natural</td>
-          <td>S/. 7.00</td>
-          <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
-        </tr>
-      </tbody>
-    </table>
+    <thead>
+      <tr>
+        <th scope="col">Desayuno</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of breakfastArr">
+      <tr>
+        <td>{{item.food}}</td>
+        <td>S/.{{item.price}}.00</td>
+        <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
+      </tr>
+      <!-- <tr>
+        <td>Cafe americano</td>
+        <td>S/. 5.00</td>
+        <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
+      </tr>
+      <tr>
+        <td>Cafe con leche</td>
+        <td>S/. 7.00</td>
+        <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
+      </tr>
+      <tr>
+        <td>Sandwich de jamón y queso</td>
+        <td>S/. 10.00</td>
+        <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
+      </tr>
+      <tr>
+        <td>Jugo natural</td>
+        <td>S/. 7.00</td>
+        <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
+      </tr> -->
+    </tbody>
+  </table>
 
   <!-- tabla de menú -->
   <table *ngIf="!typefood" class="table col-12 table-hover">
@@ -40,8 +45,13 @@
         <th scope="col">Precio</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let item of menuArr">
       <tr>
+        <td>{{item.food}}</td>
+        <td>S/.{{item.price}}.00</td>
+        <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
+      </tr>
+      <!-- <tr>
         <td>Hamburguesa simple</td>
         <td>S/. 10.00</td>
         <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
@@ -80,7 +90,7 @@
         <td>Gaseosa 750ml</td>
         <td>S/. 10.00</td>
         <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
 
