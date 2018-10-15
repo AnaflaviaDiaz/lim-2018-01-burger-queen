@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
+  // seleccion de desayuno o menu por boolean a desayuno como referente
   breakfast = true;
+
+  // item como pedido
+  orderFood: any;
+  haveOrder : boolean;
 
   constructor() { }
 

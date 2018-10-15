@@ -8,11 +8,11 @@
         <th scope="col">Precio</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of breakfastArr">
+    <tbody *ngFor="let item of breakfastArr; let i=index">
       <tr>
         <td>{{item.food}}</td>
         <td>S/.{{item.price}}.00</td>
-        <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
+        <td class="text-right"><input class="checkbox-max" type="checkbox" [checked]="item.checked" (click)="selectOrder(item, i, 'breakfastArr')"></td>
       </tr>
       <!-- <tr>
         <td>Cafe americano</td>
@@ -45,11 +45,11 @@
         <th scope="col">Precio</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of menuArr">
+    <tbody *ngFor="let item of menuArr; let i=index">
       <tr>
         <td>{{item.food}}</td>
         <td>S/.{{item.price}}.00</td>
-        <td class="text-right"><input class="checkbox-max" type="checkbox"></td>
+        <td class="text-right"><input class="checkbox-max" type="checkbox" [checked]="item.checked" (click)="selectOrder(item, i, 'menuArr')"></td>
       </tr>
       <!-- <tr>
         <td>Hamburguesa simple</td>

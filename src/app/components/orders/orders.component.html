@@ -1,24 +1,24 @@
-<div class="">
+<div class="" *ngIf="haveOrder">
 
   <h4 class="mt-5 mb-4">Orden</h4>
 
   <div class="container-total">
 
 
-    <table class="table">
-      <tbody>
+    <table class="table" >
+      <tbody *ngFor="let item of contentOrdersArr">
         <tr>
-          <td>Café Expreso</td>
-          <td>S/.3</td>
+          <td>{{ item.food}}</td>
+          <td>{{ item.price}}</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td>Café Expreso</td>
           <td>S/.3</td>
         </tr>
         <tr>
           <td>Café Expreso</td>
           <td>S/.4</td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
   </div>

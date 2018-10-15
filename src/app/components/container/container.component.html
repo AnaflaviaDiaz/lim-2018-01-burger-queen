@@ -8,17 +8,17 @@
 
 
     <div class="col">
-      <div class="mt-5">
+      <div class="mt-5 ml-2">
         <app-menu-select (typeFood)="breakfast = $event"></app-menu-select>
       </div>
-      <div class="mt-4">
-        <app-detail-menu [typefood]="breakfast"></app-detail-menu>
+      <div class="mt-4 ml-2">
+        <app-detail-menu [typefood]="breakfast" (food)="orderFood = $event" (haveOrder)="haveOrder = $event"></app-detail-menu>
       </div>
     </div>
 
 
     <div class="col-4 offset-md-1">
-      <app-orders></app-orders>
+      <app-orders [haveOrder]="haveOrder" [orderFood]="orderFood"></app-orders>
     </div>
 
 

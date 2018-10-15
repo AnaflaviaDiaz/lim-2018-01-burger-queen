@@ -7,14 +7,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class MenuSelectComponent implements OnInit {
 
-  breakfast= true;
+  breakfast = true;
 
   @Output() typeFood: EventEmitter<boolean>;
 
   constructor() {
     this.typeFood = new EventEmitter();
     // console.log(this.typeFood);
-   }
+  }
 
   ngOnInit() {
   }
