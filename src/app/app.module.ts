@@ -7,6 +7,11 @@ import { MenuSelectComponent } from './components/menu-select/menu-select.compon
 import { DetailMenuComponent } from './components/detail-menu/detail-menu.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { TotalComponent } from './components/total/total.component';
+import { environment } from 'src/environments/environment.prod';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,10 @@ import { TotalComponent } from './components/total/total.component';
     TotalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

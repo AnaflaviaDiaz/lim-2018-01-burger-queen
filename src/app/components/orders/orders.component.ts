@@ -23,10 +23,7 @@ export class OrdersComponent implements OnInit {
 
   // tslint:disable-next-line:use-life-cycle-interface
   ngDoCheck(): void {
-
     this.modifyOrder();
-
-
   }
 
   modifyOrder() {

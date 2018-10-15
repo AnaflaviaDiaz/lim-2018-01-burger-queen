@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-total',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TotalComponent implements OnInit {
 
   @Input() amount = 0;
+  @Output() orderReady: EventEmitter<boolean>;
   total: number;
 
   constructor() { }
@@ -18,6 +19,11 @@ export class TotalComponent implements OnInit {
   // tslint:disable-next-line:use-life-cycle-interface
   ngDoCheck(): void {
     // this.total;
+  }
+
+  sendOrder() {
+    const x = true;
+    this.orderReady.emit(x);
   }
 
 }
