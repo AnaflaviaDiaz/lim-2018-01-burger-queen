@@ -12,13 +12,14 @@ export class ContainerComponent implements OnInit {
 
   // item como pedido
   orderFood: any;
-  haveOrder : boolean;
+  haveOrder: boolean;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  // tslint:disable-next-line:use-life-cycle-interface
   ngDoCheck() {
     // console.log(this.breakfast);
   }

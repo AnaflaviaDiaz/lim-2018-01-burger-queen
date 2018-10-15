@@ -11,6 +11,7 @@ export class OrdersComponent implements OnInit {
   @Input() orderFood: any;
   contentOrdersArr = [];
   totalAmount: number;
+  uniqueContentOrders = [];
 
   constructor() {
     this.haveOrder = false;
@@ -20,6 +21,7 @@ export class OrdersComponent implements OnInit {
   ngOnInit() {
   }
 
+  // tslint:disable-next-line:use-life-cycle-interface
   ngDoCheck(): void {
 
 
@@ -34,9 +36,16 @@ export class OrdersComponent implements OnInit {
 
       } else {
 
+
         this.totalAmount = this.totalAmount + this.orderFood.price;
 
         this.contentOrdersArr.push(this.orderFood);
+
+        if (this.contentOrdersArr.length > 0) {
+          this.uniqueContentOrders = this.contentOrdersArr.filter((value, index, self) => self.indexOf(value) === index);
+
+          console.log(this.uniqueContentOrders);
+        }
 
       }
     }
@@ -44,10 +53,11 @@ export class OrdersComponent implements OnInit {
     // mostrarse contenido de ordenes
     if (this.contentOrdersArr.length > 0) {
       this.haveOrder = true;
-    }
-    else {
+    } else {
       this.haveOrder = false;
     }
+
+
   }
 
 }

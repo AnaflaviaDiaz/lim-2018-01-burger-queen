@@ -42,8 +42,7 @@ export class DetailMenuComponent implements OnInit {
         this.breakfastArr[pos].checked = true;
         this.food.emit(itemFood);
         this.haveOrder.emit(this.breakfastArr[pos].checked);
-      }
-      else {
+      } else {
         this.breakfastArr[pos].checked = false;
         this.food.emit(itemFood);
         this.haveOrder.emit(this.breakfastArr[pos].checked);
@@ -53,8 +52,7 @@ export class DetailMenuComponent implements OnInit {
         this.menuArr[pos].checked = true;
         this.food.emit(itemFood);
         this.haveOrder.emit(this.menuArr[pos].checked);
-      }
-      else {
+      } else {
         this.menuArr[pos].checked = false;
         this.food.emit(itemFood);
         this.haveOrder.emit(this.menuArr[pos].checked);
