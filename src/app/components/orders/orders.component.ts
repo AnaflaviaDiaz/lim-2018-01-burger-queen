@@ -24,30 +24,48 @@ export class OrdersComponent implements OnInit {
   // tslint:disable-next-line:use-life-cycle-interface
   ngDoCheck(): void {
 
+    this.modifyOrder();
 
+
+  }
+
+  modifyOrder() {
     if (this.orderFood) {
 
       if (this.orderFood.checked === false) {
 
-        this.totalAmount = this.totalAmount - this.orderFood.price;
+        const index = this.uniqueContentOrders.indexOf(this.orderFood);
+        this.uniqueContentOrders.splice(index, 1);
 
-        const index = this.contentOrdersArr.indexOf(this.orderFood);
-        this.contentOrdersArr.splice(index, 1);
+        // this.totalAmount = this.totalAmount - this.orderFood.price;
+
+        this.totalAmount = 0;
+
+        for (let _i = 0; _i < this.uniqueContentOrders.length; _i++) {
+          const num = this.uniqueContentOrders[_i];
+          this.totalAmount = this.totalAmount + num.price;
+          console.log(this.totalAmount);
+        }
 
       } else {
 
-
-        this.totalAmount = this.totalAmount + this.orderFood.price;
-
         this.contentOrdersArr.push(this.orderFood);
-
         if (this.contentOrdersArr.length > 0) {
-          this.uniqueContentOrders = this.contentOrdersArr.filter((value, index, self) => self.indexOf(value) === index);
 
-          console.log(this.uniqueContentOrders);
+          this.uniqueContentOrders = this.contentOrdersArr.filter((value, index, self) => self.indexOf(value) === index);
+          this.contentOrdersArr = this.uniqueContentOrders;
+
+          this.totalAmount = 0;
+
+          for (let _i = 0; _i < this.uniqueContentOrders.length; _i++) {
+            const num = this.uniqueContentOrders[_i];
+            this.totalAmount = this.totalAmount + num.price;
+            console.log(this.totalAmount);
+          }
         }
 
       }
+
     }
 
     // mostrarse contenido de ordenes
@@ -56,8 +74,6 @@ export class OrdersComponent implements OnInit {
     } else {
       this.haveOrder = false;
     }
-
-
   }
 
 }
