@@ -9,7 +9,7 @@
       <tbody *ngFor="let item of contentOrdersArr">
         <tr>
           <td>{{ item.food}}</td>
-          <td>{{ item.price}}</td>
+          <td>S/.{{ item.price}}.00</td>
         </tr>
         <!-- <tr>
           <td>Café Expreso</td>
@@ -24,7 +24,7 @@
   </div>
 
 
-  <app-total></app-total>
+  <app-total [amount]="totalAmount"></app-total>
 
 
 </div>

@@ -15,20 +15,20 @@ export class DetailMenuComponent implements OnInit {
 
   constructor() {
     this.breakfastArr = [
-      { 'food': 'Cafe americano', 'price': '5', 'checked': false },
-      { 'food': 'Cafe con leche', 'price': '7', 'checked': false },
-      { 'food': 'Sandwich de jamón y queso', 'price': '10', 'checked': false },
-      { 'food': 'Jugo natural', 'price': '7', 'checked': false }];
+      { 'food': 'Cafe americano', 'price': 5, 'checked': false },
+      { 'food': 'Cafe con leche', 'price': 7, 'checked': false },
+      { 'food': 'Sandwich de jamón y queso', 'price': 10, 'checked': false },
+      { 'food': 'Jugo natural', 'price': 7, 'checked': false }];
 
     this.menuArr = [
-      { 'food': 'Hamburguesa simple', 'price': '10', 'checked': false },
-      { 'food': 'Hamburguesa doble', 'price': '15', 'checked': false },
-      { 'food': 'Papas fritas', 'price': '5', 'checked': false },
-      { 'food': 'Onion Rings', 'price': '5', 'checked': false },
-      { 'food': 'Agua 500ml', 'price': '5', 'checked': false },
-      { 'food': 'Agua 750ml', 'price': '8', 'checked': false },
-      { 'food': 'Gaseosa 500ml', 'price': '7', 'checked': false },
-      { 'food': 'Gaseosa 750ml', 'price': '10', 'checked': false }];
+      { 'food': 'Hamburguesa simple', 'price': 10, 'checked': false },
+      { 'food': 'Hamburguesa doble', 'price': 15, 'checked': false },
+      { 'food': 'Papas fritas', 'price': 5, 'checked': false },
+      { 'food': 'Onion Rings', 'price': 5, 'checked': false },
+      { 'food': 'Agua 500ml', 'price': 5, 'checked': false },
+      { 'food': 'Agua 750ml', 'price': 8, 'checked': false },
+      { 'food': 'Gaseosa 500ml', 'price': 7, 'checked': false },
+      { 'food': 'Gaseosa 750ml', 'price': 10, 'checked': false }];
     this.food = new EventEmitter();
     this.haveOrder = new EventEmitter();
   }
@@ -52,15 +52,14 @@ export class DetailMenuComponent implements OnInit {
       if (!itemFood.checked) {
         this.menuArr[pos].checked = true;
         this.food.emit(itemFood);
-        this.haveOrder.emit(this.breakfastArr[pos].checked);
+        this.haveOrder.emit(this.menuArr[pos].checked);
       }
       else {
         this.menuArr[pos].checked = false;
         this.food.emit(itemFood);
-        this.haveOrder.emit(this.breakfastArr[pos].checked);
+        this.haveOrder.emit(this.menuArr[pos].checked);
       }
     }
-    // console.log(itemFood, pos, nameArr);
   }
 
 }

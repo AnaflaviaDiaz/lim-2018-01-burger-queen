@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-total',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TotalComponent implements OnInit {
 
+  @Input() amount = 0;
+  total: number;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngDoCheck(): void {
+    this.total;
   }
 
 }
