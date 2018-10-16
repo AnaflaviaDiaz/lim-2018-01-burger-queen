@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-orders',
@@ -16,7 +17,8 @@ export class OrdersComponent implements OnInit {
   name: string;
 
   constructor(
-    private _firestoreSrv: FirestoreService
+    private _firestoreSrv: FirestoreService,
+    // private router: Router
   ) {
     this.haveOrder = false;
     this.totalAmount = 0;
@@ -84,7 +86,7 @@ export class OrdersComponent implements OnInit {
       amount: this.totalAmount
     };
     if (username) {
-      this._firestoreSrv.save(data);
+      this._firestoreSrv.save(data).then(window.location.reload());
     }
 
     // console.log(arr);

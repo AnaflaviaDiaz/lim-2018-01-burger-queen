@@ -10,10 +10,10 @@ export class FirestoreService {
   constructor(
     private _db: AngularFirestore
   ) {
-    this.db = _db.collection('orders');
+    this.db = this._db.collection('orders');
    }
 
   save(data) {
-    this.db.add(data).then(console.log);
+    return this.db.add(data);
   }
 }
