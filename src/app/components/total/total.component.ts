@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class TotalComponent implements OnInit {
 
   @Input() amount = 0;
-  @Output() orderReady: EventEmitter<boolean>;
+  // @Output() orderReady: EventEmitter<boolean>;
   total: number;
 
   constructor() { }
@@ -21,9 +21,6 @@ export class TotalComponent implements OnInit {
     // this.total;
   }
 
-  sendOrder() {
-    const x = true;
-    this.orderReady.emit(x);
-  }
+
 
 }

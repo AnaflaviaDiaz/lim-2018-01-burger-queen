@@ -10,7 +10,7 @@ import { TotalComponent } from './components/total/total.component';
 import { environment } from 'src/environments/environment.prod';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
@@ -26,9 +26,10 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     FormsModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

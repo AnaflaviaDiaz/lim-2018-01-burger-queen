@@ -6,11 +6,14 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class FirestoreService {
 
+  db: any;
   constructor(
     private _db: AngularFirestore
-  ) { }
+  ) {
+    this.db = _db.collection('orders');
+   }
 
   save(data) {
-    this._db.collection('orders').add(data);
+    this.db.add(data).then(console.log);
   }
 }

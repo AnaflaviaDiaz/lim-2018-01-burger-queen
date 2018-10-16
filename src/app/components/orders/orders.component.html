@@ -2,9 +2,9 @@
 
   <h4 class="mt-5 mb-4">Orden</h4>
 
-  <!-- <div class="mt-3 mb-5">
-    <input type="text" class="form-control" placeholder="Ingresa tu nombre" #clientName>
-  </div> -->
+  <div class="mt-3 mb-5">
+    <input type="text" class="form-control" placeholder="Ingresa tu nombre" [(ngModel)]="name">
+  </div>
 
 
 
@@ -23,6 +23,8 @@
 
 
   <app-total [amount]="totalAmount" (orderReady)="$event"></app-total>
+
+  <button class="btn btn-warning" (click)="sendOrder(name)" [disabled]="name ? false: true">Enviar</button>
 
 
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
   selector: 'app-orders',
@@ -12,8 +13,11 @@ export class OrdersComponent implements OnInit {
   contentOrdersArr = [];
   totalAmount: number;
   uniqueContentOrders = [];
+  name: string;
 
-  constructor() {
+  constructor(
+    private _firestoreSrv: FirestoreService
+  ) {
     this.haveOrder = false;
     this.totalAmount = 0;
   }
@@ -41,7 +45,7 @@ export class OrdersComponent implements OnInit {
         for (let _i = 0; _i < this.uniqueContentOrders.length; _i++) {
           const num = this.uniqueContentOrders[_i];
           this.totalAmount = this.totalAmount + num.price;
-          console.log(this.totalAmount);
+          // console.log(this.totalAmount);
         }
 
       } else {
@@ -57,7 +61,7 @@ export class OrdersComponent implements OnInit {
           for (let _i = 0; _i < this.uniqueContentOrders.length; _i++) {
             const num = this.uniqueContentOrders[_i];
             this.totalAmount = this.totalAmount + num.price;
-            console.log(this.totalAmount);
+            // console.log(this.totalAmount);
           }
         }
 
@@ -71,6 +75,19 @@ export class OrdersComponent implements OnInit {
     } else {
       this.haveOrder = false;
     }
+  }
+
+  sendOrder(username) {
+    const data = {
+      order: this.uniqueContentOrders,
+      username: username,
+      amount: this.totalAmount
+    };
+    if (username) {
+      this._firestoreSrv.save(data);
+    }
+
+    // console.log(arr);
   }
 
 }
