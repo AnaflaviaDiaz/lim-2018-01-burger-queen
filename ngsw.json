@@ -1,18 +1,18 @@
 {
   "configVersion": 1,
-  "index": "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/index.html",
+  "index": "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/favicon.ico",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/index.html",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/main.56a4a12994159bbf3d3c.js",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/polyfills.2f4a59095805af02bd79.js",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/runtime.a66f828dca56eeb90e02.js",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/styles.81d16998a56ef9c3c5ae.css"
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/favicon.ico",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/index.html",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/main.56a4a12994159bbf3d3c.js",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/polyfills.2f4a59095805af02bd79.js",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/runtime.a66f828dca56eeb90e02.js",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/styles.81d16998a56ef9c3c5ae.css"
       ],
       "patterns": []
     },
@@ -21,14 +21,14 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-128x128.png",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-144x144.png",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-152x152.png",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-192x192.png",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-384x384.png",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-512x512.png",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-72x72.png",
-        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-96x96.png"
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-128x128.png",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-144x144.png",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-152x152.png",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-192x192.png",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-384x384.png",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-512x512.png",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-72x72.png",
+        "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-96x96.png"
       ],
       "patterns": []
     }
@@ -47,20 +47,20 @@
     }
   ],
   "hashTable": {
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/favicon.ico": "825608f561856cbdb84bcf3b5665a34144e0d5a5",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/index.html": "0567bb46971a76a38a4555b24514cae5783a7dc0",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/main.56a4a12994159bbf3d3c.js": "9850ef0091439d406cd28459a089f0be7262fa4c",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/polyfills.2f4a59095805af02bd79.js": "8949bb1b1e302dda246f6ed9c2da703270360b1f",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
-    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/styles.81d16998a56ef9c3c5ae.css": "80f521d1797c803c8b3d0c5221d56fc5a5ed832c"
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/favicon.ico": "825608f561856cbdb84bcf3b5665a34144e0d5a5",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/index.html": "4771f02434f73200926611fb241e793b307a28a1",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/main.56a4a12994159bbf3d3c.js": "9850ef0091439d406cd28459a089f0be7262fa4c",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/polyfills.2f4a59095805af02bd79.js": "8949bb1b1e302dda246f6ed9c2da703270360b1f",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/styles.81d16998a56ef9c3c5ae.css": "80f521d1797c803c8b3d0c5221d56fc5a5ed832c"
   },
   "navigationUrls": [
     {
