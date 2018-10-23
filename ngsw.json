@@ -37,7 +37,7 @@
     {
       "name": "Burguer Queen",
       "patterns": [
-        "https:\\/\\/burger-queen-45f34\\.firebaseio\\.com"
+        "https:\\/\\/burger-queen-45f34\\.firebaseio\\.com\\/.*"
       ],
       "strategy": "performance",
       "maxSize": 100,

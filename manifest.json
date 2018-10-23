@@ -5,7 +5,7 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
-  "start_url": "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app",
+  "start_url": "https://anaflaviadiaz.github.io/lim-2018-01-burger-queen/my-app/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
