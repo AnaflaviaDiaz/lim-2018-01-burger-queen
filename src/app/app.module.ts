@@ -7,11 +7,12 @@ import { MenuSelectComponent } from './components/menu-select/menu-select.compon
 import { DetailMenuComponent } from './components/detail-menu/detail-menu.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { TotalComponent } from './components/total/total.component';
-import { environment } from 'src/environments/environment.prod';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import {FormsModule} from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,11 @@ import {FormsModule} from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AngularFirestoreModule,
-    AngularFirestoreModule.enablePersistence(),
-    FormsModule
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule.enablePersistence()
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
