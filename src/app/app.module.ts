@@ -26,11 +26,11 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFirestoreModule.enablePersistence(),
-    FormsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    FormsModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
