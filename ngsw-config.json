@@ -24,7 +24,7 @@
   "dataGroups": [{
     "name": "Burguer Queen",
     "urls": [
-      "https://burger-queen-45f34.firebaseio.com"
+      "https://burger-queen-45f34.firebaseio.com/**"
     ],
     "cacheConfig": {
       "startegy": "freshness",
