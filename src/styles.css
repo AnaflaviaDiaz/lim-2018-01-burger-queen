@@ -55,7 +55,9 @@ html {
   width: device-width
 }
 
-
+.d-none {
+  display: none;
+}
 
 body {
   margin: 0;

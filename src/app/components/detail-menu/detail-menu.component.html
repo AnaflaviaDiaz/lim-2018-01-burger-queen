@@ -10,9 +10,11 @@
     </thead>
     <tbody *ngFor="let item of breakfastArr; let i=index">
       <tr>
-        <td>{{item.food}}</td>
+        <td><label [for]="item.food">{{item.food}}</label></td>
         <td>S/.{{item.price}}.00</td>
-        <td class="text-right"><input class="checkbox-max" type="checkbox" [checked]="item.checked" (click)="selectOrder(item, i, 'breakfastArr')"></td>
+        <td class="text-right">
+          <!-- <label for="item.food">{{item.food}}</label> -->
+          <input [id]="item.food" class="checkbox-max" type="checkbox" [checked]="item.checked" (click)="selectOrder(item, i, 'breakfastArr')"></td>
       </tr>
       <!-- <tr>
         <td>Cafe americano</td>
@@ -47,9 +49,12 @@
     </thead>
     <tbody *ngFor="let item of menuArr; let i=index">
       <tr>
-        <td>{{item.food}}</td>
+        <td><label [for]="item.food">{{item.food}}</label></td>
         <td>S/.{{item.price}}.00</td>
-        <td class="text-right"><input class="checkbox-max" name="item.food" type="checkbox" [checked]="item.checked" (click)="selectOrder(item, i, 'menuArr')"></td>
+        <td class="text-right">
+          <!-- <label [for]="item.food">{{item.food}}</label> -->
+          <input class="checkbox-max" [id]="item.food" [name]="item.food" [value]="item.food" type="checkbox" [checked]="item.checked"
+            (click)="selectOrder(item, i, 'menuArr')"></td>
       </tr>
       <!-- <tr>
         <td>Hamburguesa simple</td>
