@@ -22,6 +22,21 @@
     </div>
 
 
+    <!-- <div [ngClass]="{'col-12': !haveOrder, 'col': haveOrder}">
+      <div class="mt-4 ml-2" [ngClass]="{'mr-2': !haveOrder}">
+        <app-menu-select (typeFood)="breakfast = $event"></app-menu-select>
+      </div>
+      <div class="mt-4 ml-2">
+        <app-detail-menu [typefood]="breakfast" (food)="orderFood = $event" (haveOrder)="haveOrder = $event"></app-detail-menu>
+      </div>
+    </div>
+
+
+    <div [ngClass]="{'col-4': haveOrder, 'offset-md-1': haveOrder}">
+      <app-orders [haveOrder]="haveOrder" [orderFood]="orderFood"></app-orders>
+    </div> -->
+
+
   </div>
 
 
